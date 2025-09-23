@@ -1,0 +1,247 @@
+/* --- 通用樣式與變數 --- */
+:root {
+    --bg-color-dark: #1a202c;
+    --card-bg-dark: #2d3748;
+    --primary-color: #4fd1c5;
+    --text-color-dark: #f7fafc;
+
+    --bg-color-light: #f7fafc;
+    --card-bg-light: #ffffff;
+    --text-color-light: #1a202c;
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 漸進載入動畫 --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section {
+    padding: 60px 0;
+    animation: fadeIn 0.75s ease-out forwards;
+}
+
+/* --- 導覽列 --- */
+.navbar {
+    background-color: var(--card-bg-dark);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-color-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+#theme-toggle {
+    background-color: var(--primary-color);
+    color: var(--bg-color-dark);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* --- 英雄區塊 --- */
+.hero-section {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.hero-section .subtitle {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+    color: var(--text-color-dark);
+}
+
+/* --- 專案區塊 --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg-dark);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+/* --- 聯絡方式 & 按鈕 --- */
+#contact {
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-color-dark);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: #68d3c7;
+}
+
+.cta-button i {
+    margin-right: 8px;
+}
+
+/* --- 頁尾 --- */
+.footer {
+    background-color: var(--card-bg-dark);
+    color: var(--text-color-dark);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a {
+    color: var(--text-color-dark);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* --- 淺色模式 --- */
+body.light-mode {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+body.light-mode .navbar,
+body.light-mode .footer {
+    background-color: #e2e8f0;
+}
+
+body.light-mode .nav-links a {
+    color: var(--text-color-light);
+}
+
+body.light-mode .nav-links a:hover {
+    color: #2c5282; /* 淺色模式下的強調色 */
+}
+
+body.light-mode .hero-section .subtitle {
+    color: var(--text-color-light);
+}
+
+body.light-mode .project-card {
+    background-color: var(--card-bg-light);
+    box-shadow: var(--shadow-light);
+}
+
+body.light-mode #theme-toggle {
+    background-color: #2d3748;
+    color: #f7fafc;
+}
+
+body.light-mode .social-links a {
+    color: var(--text-color-light);
+}
