@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔡旻哲 | 全端網頁開發者</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#hero" class="nav-logo">minzhe</a>
+            <ul class="nav-links">
+                <li><a href="#about">關於我</a></li>
+                <li><a href="#projects">專案</a></li>
+                <li><a href="#contact">聯絡</a></li>
+            </ul>
+            <button id="theme-toggle">切換模式</button>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊 -->
+    <header id="hero" class="hero-section">
+        <div class="container">
+            <h1>minzhe</h1>
+            <p class="subtitle">ntut</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- 關於我 -->
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>關於我</h2>
+                <p>我是一位對全端開發充滿熱情的開發者，專注於打造兼具使用者體驗與高效能的網頁應用。我擅長從零到一建立專案，熟悉前端的 HTML/CSS/JavaScript 與現代框架，同時也對後端技術與資料庫有深入的了解。我樂於學習新技術，並將其應用於解決實際問題。</p>
+            </div>
+        </section>
+
+        <!-- 專案 -->
+        <section id="projects" class="content-section">
+            <div class="container">
+                <h2>精選專案</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>專案一：互動式儀表板</h3>
+                        <p>一個使用 D3.js 打造的數據視覺化儀表板，能夠即時呈現複雜的數據分析結果，提供豐富的互動操作與客製化圖表。</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>專案二：電商平台</h3>
+                        <p>一個全功能的電商網站，涵蓋了商品展示、購物車、使用者認證、金流串接等功能，並針對高流量進行了效能優化。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 聯絡方式 -->
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>聯絡方式</h2>
+                <p>歡迎隨時透過 Email 與我聯繫，期待與您的合作！</p>
+                <a href="mailto:ogi87283@gmail.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Email 給我
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 蔡旻哲</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
